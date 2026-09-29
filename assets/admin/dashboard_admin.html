@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin | SMAN 5 MBD</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebarMobile()"></div>
+    <aside class="sidebar" id="adminSidebar">
+      <div class="brand">
+        <div class="brand-logo">✦</div>
+        <div><strong>SMAN 5 MBD</strong><span>Sistem Konseling</span></div>
+        <button type="button" class="sidebar-close-btn" id="sidebarCloseBtn" onclick="closeSidebarMobile()" aria-label="Tutup menu">&times;</button>
+      </div>
+
+      <nav class="navigation">
+        <a class="nav-item active" href="#"><span>⌂</span>Dashboard</a>
+        <small>MENU UTAMA</small>
+        <a class="nav-item" href="#"><span>♙</span>Data Siswa</a>
+        <a class="nav-item" href="#"><span>▤</span>Konseling</a>
+        <a class="nav-item" href="#"><span>▥</span>Laporan &amp; Statistik</a>
+        <a class="nav-item" href="#"><span>⬟</span>Manajemen User</a>
+        <a class="nav-item" href="#"><span>⚙</span>Pengaturan</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <div class="note-icon">❋</div>
+        <p>Bersama kita wujudkan lingkungan sekolah yang sehat, aman dan suportif.</p>
+      </div>
+
+      <div class="profile">
+        <div class="avatar">♙</div>
+        <div><strong>Admin</strong><span>Administrator</span></div>
+        <b>›</b>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-button" id="menuToggleBtn" aria-label="Buka menu" onclick="toggleSidebar()">☰</button>
+        <label class="search"><span>⌕</span><input type="search" placeholder="Cari siswa, nama, atau NIS..."></label>
+        <div class="top-actions">
+          <button class="bell" aria-label="Notifikasi">♧<i>3</i></button>
+          <div class="top-user"><div class="avatar small">A</div><strong>Administrator</strong><span>⌄</span></div>
+        </div>
+      </header>
+
+      <section class="content">
+        <section class="welcome-row">
+          <div class="welcome">
+            <div class="welcome-copy">
+              <p class="eyebrow">PORTAL ADMINISTRATOR · SMAN 5 MBD</p>
+              <h1>Selamat Datang,<br><b>Administrator!</b></h1>
+              <p class="welcome-desc">Kelola data konseling, pantau perkembangan siswa,<br class="desktop-only"> dan ciptakan lingkungan belajar yang lebih baik.</p>
+              <div class="date">▣ &nbsp; Selasa, 29 September 2026</div>
+            </div>
+            <div class="school-art" aria-label="Ilustrasi sekolah">
+              <div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+              <div class="sun"></div>
+              <div class="tree tree-left">🌳</div>
+              <div class="school-building">
+                <div class="roof"></div>
+                <div class="school-sign">SMAN 5 MBD</div>
+                <div class="windows">
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                  <i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="door"></div>
+              </div>
+              <div class="tree tree-right">🌳</div>
+              <div class="ground"></div>
+            </div>
+            <div class="welcome-slogan">Dengarkan<br> Pahami<br> Dukung ♡</div>
+          </div>
+
+          <aside class="quick-panel">
+            <h2>Aksi Cepat</h2>
+            <div class="quick-grid">
+              <a href="#" class="quick purple"><span>♙＋</span><b>Tambah<br>Siswa</b><em>›</em></a>
+              <a href="#" class="quick green"><span>▤</span><b>Buat Sesi<br>Konseling</b><em>›</em></a>
+              <a href="#" class="quick orange"><span>▣</span><b>Lihat<br>Laporan</b><em>›</em></a>
+              <a href="#" class="quick blue"><span>⚙</span><b>Pengaturan<br>Sistem</b><em>›</em></a>
+            </div>
+          </aside>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card blue-tint">
+            <div class="stat-top"><span class="stat-icon blue-icon">♟</span><span class="spark blue-spark">⌁</span></div>
+            <p>Total Siswa</p><h2>237</h2><div class="growth">↑ 12% <span>dibanding bulan lalu</span></div>
+          </article>
+          <article class="stat-card purple-tint">
+            <div class="stat-top"><span class="stat-icon purple-icon">▤</span><span class="spark purple-spark">⌁</span></div>
+            <p>Siswa Aktif Konseling</p><h2>48</h2><div class="growth">↑ 8% <span>dibanding bulan lalu</span></div>
+          </article>
+          <article class="stat-card green-tint">
+            <div class="stat-top"><span class="stat-icon green-icon">▦</span><span class="spark green-spark">⌁</span></div>
+            <p>Sesi Konseling Bulan Ini</p><h2>62</h2><div class="growth">↑ 15% <span>dibanding bulan lalu</span></div>
+          </article>
+          <article class="stat-card red-tint">
+            <div class="stat-top"><span class="stat-icon red-icon">⚠</span><span class="spark red-spark">⌁</span></div>
+            <p>Kasus Perlu Perhatian</p><h2>7</h2><div class="growth red-growth">↑ 2% <span>dibanding bulan lalu</span></div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel trend-panel">
+            <div class="panel-heading">
+              <div><h2>Tren Konseling Siswa</h2><p>Jumlah sesi konseling dalam 6 bulan terakhir</p></div>
+              <select aria-label="Rentang waktu"><option>6 Bulan Terakhir</option><option>12 Bulan Terakhir</option></select>
+            </div>
+            <div class="chart">
+              <div class="y-labels"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div>
+              <div class="plot">
+                <div class="grid-lines"><i></i><i></i><i></i><i></i><i></i></div>
+                <svg viewBox="0 0 600 170" preserveAspectRatio="none" role="img" aria-label="Grafik tren konseling dari April sampai September">
+                  <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6257ee" stop-opacity=".22"/><stop offset="100%" stop-color="#6257ee" stop-opacity=".02"/></linearGradient></defs>
+                  <path d="M0 145 C45 134 75 119 120 116 S205 103 240 106 S320 116 360 111 S440 75 480 72 S555 50 600 39 L600 170 L0 170 Z" fill="url(#fill)"/>
+                  <path d="M0 145 C45 134 75 119 120 116 S205 103 240 106 S320 116 360 111 S440 75 480 72 S555 50 600 39" fill="none" stroke="#6257ee" stroke-width="3"/>
+                  <g fill="#6257ee" stroke="#fff" stroke-width="3"><circle cx="0" cy="145" r="6"/><circle cx="120" cy="116" r="6"/><circle cx="240" cy="106" r="6"/><circle cx="360" cy="111" r="6"/><circle cx="480" cy="72" r="6"/><circle cx="600" cy="39" r="6"/></g>
+                </svg>
+                <div class="x-labels"><span>Apr</span><span>Mei</span><span>Jun</span><span>Jul</span><span>Agu</span><span>Sep</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel category-panel">
+            <div class="panel-heading"><div><h2>Kategori Permasalahan</h2><p>Berdasarkan data konseling</p></div></div>
+            <div class="donut-layout">
+              <div class="donut"><div class="donut-center"><b>Total</b><strong>62 Kasus</strong></div></div>
+              <ul class="legend">
+                <li><i class="dot dot-blue"></i><span>Masalah Akademik</span><b>28%</b></li>
+                <li><i class="dot dot-green"></i><span>Masalah Pribadi</span><b>22%</b></li>
+                <li><i class="dot dot-yellow"></i><span>Masalah Sosial</span><b>18%</b></li>
+                <li><i class="dot dot-red"></i><span>Masalah Keluarga</span><b>14%</b></li>
+                <li><i class="dot dot-purple"></i><span>Lainnya</span><b>18%</b></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="panel activity-panel">
+            <div class="panel-heading"><h2>Aktivitas Terbaru</h2><a href="#">Lihat Semua</a></div>
+            <div class="activity-list">
+              <div class="activity"><span class="activity-icon mint">▤</span><div><b>Sesi konseling baru ditambahkan</b><p>Oleh Guru BK · 09:45</p></div><span class="chevron">›</span></div>
+              <div class="activity"><span class="activity-icon violet">♙</span><div><b>Data siswa diperbarui</b><p>NIS 10234 · 09:32</p></div><span class="chevron">›</span></div>
+              <div class="activity"><span class="activity-icon amber">▣</span><div><b>Laporan bulanan selesai</b><p>September 2026 · 08:20</p></div><span class="chevron">›</span></div>
+              <div class="activity"><span class="activity-icon sky">▣</span><div><b>Pengguna baru ditambahkan</b><p>Wakil Kepala Sekolah · 07:15</p></div><span class="chevron">›</span></div>
+            </div>
+          </article>
+
+          <article class="panel students-panel">
+            <div class="panel-heading">
+              <div class="table-title"><span class="alert-icon">⚠</span><div><h2>Daftar Siswa yang Perlu Diperhatikan</h2><p>Siswa dengan catatan khusus atau memerlukan tindak lanjut</p></div></div>
+              <a href="#">Lihat Semua →</a>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>No</th><th>Nama Siswa</th><th>Kelas</th><th>Kategori Masalah</th><th>Tanggal Terakhir</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Andi Pratama</td><td>XII IPA 1</td><td><span class="category"><i class="dot dot-yellow"></i>Masalah Akademik</span></td><td>08 Sep 2026</td><td><span class="status urgent">● Perlu Tindak Lanjut</span></td></tr>
+                  <tr><td>2</td><td>Siti Rahmawati</td><td>XII IPS 2</td><td><span class="category"><i class="dot dot-purple"></i>Masalah Pribadi</span></td><td>07 Sep 2026</td><td><span class="status follow">● Dipantau</span></td></tr>
+                  <tr><td>3</td><td>Budi Santoso</td><td>X IPA 3</td><td><span class="category"><i class="dot dot-red"></i>Masalah Sosial</span></td><td>06 Sep 2026</td><td><span class="status follow">● Dipantau</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <aside class="quote-card">
+            <div class="counseling-illustration"><div class="plant">🌿</div><div class="counselor">👩🏻‍🏫</div><div class="student">👩🏻</div><div class="sofa"></div></div>
+            <div class="quote-content">
+              <blockquote>“Kesehatan mental adalah fondasi dari prestasi yang berkelanjutan.”</blockquote>
+              <small>Tim BK SMAN 5 MBD</small>
+              <span class="heart">♥</span>
+            </div>
+            <div class="quote-bottom"></div>
+          </aside>
+        </section>
+        <footer>© 2026 SMAN 5 MBD · Sistem Informasi Konseling</footer>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const isMobile = window.innerWidth <= 900;
+      const app = document.querySelector('.app');
+      const sidebar = document.getElementById('adminSidebar');
+
+      if (isMobile) {
+        if (sidebar && sidebar.classList.contains('show')) {
+          closeSidebarMobile();
+        } else {
+          openSidebarMobile();
+        }
+      } else {
+        if (app) {
+          app.classList.toggle('sidebar-collapsed');
+          const isCollapsed = app.classList.contains('sidebar-collapsed');
+          localStorage.setItem('admin_sidebar_collapsed', isCollapsed ? '1' : '0');
+        }
+      }
+    }
+
+    function openSidebarMobile() {
+      const sidebar = document.getElementById('adminSidebar');
+      const backdrop = document.getElementById('sidebarBackdrop');
+      if (sidebar) sidebar.classList.add('show');
+      if (backdrop) backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebarMobile() {
+      const sidebar = document.getElementById('adminSidebar');
+      const backdrop = document.getElementById('sidebarBackdrop');
+      if (sidebar) sidebar.classList.remove('show');
+      if (backdrop) backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.innerWidth > 900) {
+        if (localStorage.getItem('admin_sidebar_collapsed') === '1') {
+          const app = document.querySelector('.app');
+          if (app) app.classList.add('sidebar-collapsed');
+        }
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeSidebarMobile();
+      }
+    });
+
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 900) {
+        closeSidebarMobile();
+      }
+    });
+  </script>
+</body>
+</html>
